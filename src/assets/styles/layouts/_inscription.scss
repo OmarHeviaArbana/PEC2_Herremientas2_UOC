@@ -1,0 +1,63 @@
+
+
+
+h1:has(+ p) {
+  margin-top: 0;
+  text-align: center;
+}
+
+:is(div) > h1 + :where(p) {
+  margin-bottom:  30px;
+  font-family:    $font-family-secondary;
+  font-size:      $font-size-18;
+  font-weight:    400;
+  color:          $text-color;
+}
+
+.form {
+  &-control {
+    font-family:  $font-family-secondary;
+    font-size:    $font-size-14;
+  }
+  &__fieldset {
+    padding:          30px;
+    margin-bottom:    10px;
+    background-color: color(display-p3 0.92 0.93 0.96);;
+
+    }
+  &__legend {
+    font-family:      $font-family-principal;
+    font-size:        $font-size-24;
+    color:            lab(32 38.34 -76.09);
+  }
+  &__label {
+    margin-bottom:  10px;
+    font-family:    $font-family-secondary;
+    font-size:      $font-size-16;
+    font-weight:    700;
+    color:          hwb(240deg 21.18% 22.35%);
+    strong {
+      color: $error-color;
+    }
+  }
+  ::placeholder {
+    font-family:  $font-family-secondary;
+    font-size:    $font-size-14;
+    font-weight:  400;
+    color:        $text-color;
+  }
+  &__validation {
+    font-family:  $font-family-secondary;
+    font-size:    $font-size-14;
+    font-weight:  400;
+  }
+  .btn {
+    width: 100%;
+    font-family:  $font-family-principal;
+    font-size: $font-size-18;
+  }
+}
+
+
+
+

@@ -1,0 +1,84 @@
+/***** Footer *****/
+
+.footer {
+  display:          flex;
+  flex-direction:   column;
+  align-items:      center;
+  justify-content:  center;
+  padding:          60px 50px;
+
+  background-color: $background-footer;
+  container-type:   inline-size;
+
+  @media (min-width:$breakpoint-xl) {
+    flex-direction:   row;
+    justify-content:  space-between;
+
+  }
+
+  &__logotipo {
+    width: 250px;
+    height: auto;
+    margin-top: 20px;
+    &:hover { cursor: pointer; }
+    @container (min-width: 1102px) { margin-top: 0; }
+  }
+
+  &__legal {
+    display:         flex;
+    flex-direction:  column;
+    align-items:     center;
+
+    @container (min-width: 1102px) { align-items: flex-end; }
+  }
+
+  &__links-list {
+    padding:    0;
+    margin-top: 70px;
+
+    @container (min-width: 1102px) {
+      display:         flex;
+      gap:             40px;
+      align-items:     flex-end;
+      justify-content: flex-end;
+      margin:          0;
+    }
+  }
+
+  &__item {
+    margin-bottom:  20px;
+    text-align:     center;
+    list-style:     none;
+
+    @container (min-width: 1102px) { margin-bottom: 0; }
+  }
+
+  &__link {
+    font-family:     $font-family-secondary;
+    font-size:       $font-size-16;
+    font-weight:     300;
+    color:           $text-color;
+    text-decoration: none;
+    text-transform:  capitalize;
+    cursor:          pointer;
+
+    &:hover { color: $primary-color; }
+  }
+
+  &__legal-text {
+    margin-top:  50px;
+    font-family: $font-family-secondary;
+    font-size:   $font-size-16;
+    font-weight: 300;
+    color:       $primary-color;
+    text-align:  center;
+
+   @container (min-width: 600px) { width: 70%; }
+    @container (min-width: 1102px) {
+      margin:     10px 0;
+      text-align: right;
+    }
+  }
+}
+
+/***** End Footer *****/

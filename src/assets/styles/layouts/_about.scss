@@ -1,0 +1,83 @@
+
+h1:is(.article__title) { margin: 30px 0 10px 0; }
+.introduction :where(img) {
+  width: 100%;
+  height:     auto;
+  object-fit: contain;
+}
+
+
+.introduction {
+  display:        flex;
+  flex-direction: row;
+  height:         100px;
+  @container (min-width: 564px) { height: 180px; }
+  @container (min-width: 1150px) { height: 350px; }
+
+  &__container-logo {
+    display:          flex;
+    justify-content:  center;
+    width:            60%;
+    height:           auto;
+    background-color: $background-color;
+  }
+  &__logo {
+    padding:    15px;
+    @container (min-width: 564px) { padding: 30px; }
+    @container (min-width: 1150px) { padding: 100px; }
+  }
+  &__container-image {
+    width:    40%;
+    overflow: hidden;
+  }
+}
+
+.article {
+  display:          flex;
+  flex-direction:   column;
+  justify-content:  center;
+  &__section-container {
+    margin-bottom: 40px;
+    @container (min-width: 872px) {
+      display:    flex;
+      flex-wrap:  wrap;
+      gap:        40px;
+    }
+  }
+  &__section {
+
+    margin-bottom: 40px;
+    &:last-child { margin-bottom: 0; }
+    @container (min-width: 872px) { flex: 1 1 calc(50% - 40px);}
+  }
+  &__section-text {
+    font-family:  $font-family-secondary;
+    font-size:    $font-size-18;
+    font-weight:  400;
+    color:        $text-color;
+  }
+  &__section-img {
+    position: relative;
+    @container (min-width: 872px) { flex: 1 1 calc(50% - 40px);}
+  }
+  &__section-image {
+    position: relative;
+    z-index:  4;
+    width:    97%;
+    height:   100%;
+      @container (min-width: 872px) {
+        width:      97%;
+        object-fit: cover;
+      }
+  }
+  &__section-decoration {
+    position:         absolute;
+    right:            0;
+    bottom:           -5%;
+    z-index:          1;
+    width:            97%;
+    height:           100%;
+    background-color: $primary-color;
+    @container (min-width: 872px) { bottom: -3%; }
+  }
+}

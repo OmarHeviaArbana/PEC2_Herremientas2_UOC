@@ -1,0 +1,21 @@
+$primary: #3636C6;
+
+$grid-breakpoints: (
+  xs: 0,        // Extra pequeño
+  sm: 390px,    // Pequeño
+  md: 600px,    // Mediano
+  lg: 900px,    // Grande
+  xl: 1200px,   // Extra grande
+  xxl: 1600px   // Extra extra grande
+);
+
+/* Form */
+
+$input-border-radius: 0 ;
+$form-control-border-color: $primary;
+$form-control-invalid-border-color: $error-color;
+$border-radius: 0;
+
+/* End Form */
+
+@import "./../../../node_modules/bootstrap/scss/bootstrap";
